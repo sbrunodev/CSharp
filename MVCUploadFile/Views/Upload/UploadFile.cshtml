@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "UploadFile";
+}
+<h2>UploadFile</h2>
+@using (Html.BeginForm("UploadFile", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+        @Html.TextBox("file", "", new { type = "file" }) <br />
+        <input type="submit" value="Upload" />
+        @ViewBag.Message
+    </div>
+}
+
+<h1>HTML e CSS</h1>
+
+<form action="/Upload/UploadFile" enctype="multipart/form-data" method="post">
+    <div>
+        <input id="secretCode" name="secretCode" type="text" value="" />
+        <input id="file" name="file" type="file" value=""> <br>
+        <input type="submit" value="Upload">
+
+    </div>
+</form>

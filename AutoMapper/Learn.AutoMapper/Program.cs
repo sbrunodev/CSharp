@@ -15,7 +15,7 @@ namespace Learn.AutoMapper
                 Age = 26,
                 Birth = new DateTime(1995, 2, 25)
             };
-
+            
             AutoMapperManagement autoMapper = new AutoMapperManagement();
 
             var userViewModel = (UserViewModel) autoMapper.MappingClass<User, UserViewModel>(user);
